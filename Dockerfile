@@ -1,7 +1,7 @@
 # ----------------------------------
 # Pterodactyl Dockerfile
 # ----------------------------------
-FROM		ubuntu:18.10
+FROM		debian:buster-slim
 
 LABEL 		author="Nils Gereke" maintainer="mail@wuffy.eu"
 
