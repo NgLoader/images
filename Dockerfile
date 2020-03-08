@@ -15,8 +15,8 @@ RUN 		apt-get update -y \
 			&& useradd -d /home/container -m container
  
 RUN			curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
-RUN			export PATH="/root/.pyenv/bin:$PATH" eval "$(pyenv init -)" eval "$(pyenv virtualenv-init -)
-RUN			export CONFIGURE_OPTS=--enable-optimizations pyenv install 3.8.1 -v
+RUN			PATH="/root/.pyenv/bin:$PATH" eval "$(pyenv init -)" eval "$(pyenv virtualenv-init -)
+RUN			CONFIGURE_OPTS=--enable-optimizations pyenv install 3.8.1 -v
 RUN			pyenv global 3.8.1
 
 USER        container
